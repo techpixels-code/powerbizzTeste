@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Powerbizz.ai Design System - Exact Match to PNG Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    /* Dark Background System - Exact from PNG */
+    /*--background: 220 27% 8%;  #100C2A equivalent */
+    --background-secondary: 220 25% 12%;
+    --foreground: 0 0% 98%;
+
+    /* Purple/Pink Brand System - Exact from PNG */
+    --primary: 320 100% 75%; /* #E040FB equivalent */
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 285 100% 75%;
+    --primary-dark: 275 100% 60%;
+
+    /* Card System */
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --card-border: 220 20% 20%;
+
+    /* Interactive Elements */
+    --accent: 320 100% 75%;
+    --accent-foreground: 0 0% 98%;
+    --muted: 220 20% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    /* UI Elements */
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 320 100% 75%;
+
+    /* Gradients - Exact from PNG */
+    --gradient-primary: linear-gradient(135deg, #E040FB, #8A2BE2);
+    --gradient-background: linear-gradient(180deg, #100C2A, #1A1A2E);
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 12%), hsl(220 20% 16%));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 40px rgba(224, 64, 251, 0.3);
+    --shadow-card: 0 10px 30px rgba(16, 12, 42, 0.5);
+    --shadow-float: 0 20px 60px rgba(224, 64, 251, 0.2);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Already optimized for dark theme - keeping same values */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: var(--gradient-background);
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .font-inter {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Hero Text Styles */
+  .hero-title {
+    @apply text-6xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tight;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Animated Gradient Border */
+  .gradient-border {
+    position: relative;
+    background: var(--gradient-card);
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WhatsApp Float Button */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    background: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  }
+
+  /* Section Padding */
+  .section-padding {
+    @apply px-4 xs:px-6 py-12 xs:py-16 md:py-24 lg:py-32;
+  }
+
+  /* Container Max Width */
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 xs:px-6;
+  }
+
+  /* Responsive Typography */
+  .hero-title {
+    @apply text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl;
+  }
+
+  .section-title {
+    @apply text-3xl xs:text-4xl md:text-5xl;
+  }
+
+  .section-subtitle {
+    @apply text-lg xs:text-xl md:text-2xl;
+  }
+}
