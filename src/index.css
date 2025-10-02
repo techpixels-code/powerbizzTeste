@@ -8,9 +8,9 @@
 
 @layer base {
   :root {
-    /* Dark Background System - Exact from PNG */
-    /*--background: 220 27% 8%;  #100C2A equivalent */
-    --background-secondary: 220 25% 12%;
+    /* Dark Background System - Exact from Figma (Very Dark/Black) */
+    --background: 240 10% 5%; /* Deep dark background like Figma */
+    --background-secondary: 240 8% 8%;
     --foreground: 0 0% 98%;
 
     /* Purple/Pink Brand System - Exact from PNG */
@@ -168,5 +168,19 @@
 
   .section-subtitle {
     @apply text-lg xs:text-xl md:text-2xl;
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }

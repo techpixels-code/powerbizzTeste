@@ -1,22 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Target, Users, MessageCircle, Shield, FileText } from "lucide-react";
+import womanImage from "@/assets/woman.png";
+import elementoFlutuante1 from "@/assets/elemento-flutuante1.png";
+import elementoFlutuante2 from "@/assets/elemento-flutuante2.png";
+import elementoFlutuante3 from "@/assets/elemento-flutuante3.png";
+import iconP from "@/assets/icon-p.png";
+import iconEscabilidade from "@/assets/icon-escabilidade.png";
+import iconEscudoRight from "@/assets/icon-escudoright.png";
+import iconDepoimentos from "@/assets/icon-depoimentos.png";
 
 const SobreSection = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: "Automação Inteligente",
-      description: "Nossa IA trabalha 24/7 para automatizar processos e maximizar resultados."
+      icon: iconEscabilidade,
+      title: "Escabilidade total",
+      description: "Atenda milhares de clientes simultaneamente sem precisar contratar mais pessoas"
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: "Segurança Garantida",
-      description: "Proteção total dos seus dados com as melhores práticas de segurança."
+      icon: iconEscudoRight,
+      title: "Segurança e governança",
+      description: "Proteção total dos seus dados com as melhores práticas de segurança e compliance"
     },
     {
-      icon: <FileText className="w-8 h-8 text-white" />,
-      title: "Relatórios Detalhados",
-      description: "Acompanhe cada métrica e resultado em tempo real."
+      icon: iconDepoimentos,
+      title: "Disponível 24/7",
+      description: "Sua empresa nunca dorme. Atendimento e vendas funcionando sem parar"
     }
   ];
 
@@ -45,26 +52,27 @@ const SobreSection = () => {
             </p>
           </div>
 
-          {/* Right Content - Image */}
+          {/* Right Content - Image from Figma */}
           <div className="relative">
             <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] rounded-full blur-2xl opacity-20"></div>
-              <div className="relative bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] p-1 rounded-full">
-                <div className="bg-background rounded-full p-4">
-                  <div className="w-64 h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center">
-                    <div className="text-6xl">👩‍💼</div>
-                  </div>
-                </div>
+              {/* Main circular image with gradient border */}
+              <div className="relative">
+                <img 
+                  src={womanImage} 
+                  alt="Powerbizz.ai Digital Person" 
+                  className="w-full h-auto relative z-10"
+                />
               </div>
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white text-sm font-bold backdrop-blur-sm">
-                <MessageCircle className="w-4 h-4" />
+              
+              {/* Floating chat elements - Exact from Figma */}
+              <div className="absolute -top-8 -right-4 z-20 animate-float">
+                <img src={elementoFlutuante1} alt="Chat element" className="w-32 h-auto" />
               </div>
-              <div className="absolute top-1/2 -left-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white backdrop-blur-sm">
-                <Users className="w-6 h-6" />
+              <div className="absolute top-1/3 -left-8 z-20 animate-float" style={{ animationDelay: '0.5s' }}>
+                <img src={elementoFlutuante2} alt="Chat element" className="w-32 h-auto" />
               </div>
-              <div className="absolute -bottom-4 left-1/4 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white backdrop-blur-sm">
-                <Zap className="w-5 h-5" />
+              <div className="absolute bottom-1/4 -right-6 z-20 animate-float" style={{ animationDelay: '1s' }}>
+                <img src={elementoFlutuante3} alt="Chat element" className="w-20 h-auto" />
               </div>
             </div>
           </div>
@@ -74,10 +82,10 @@ const SobreSection = () => {
         <div className="relative">
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6 text-center">
+              <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6 text-center hover:scale-105 transition-smooth">
                 <CardContent className="p-0">
                   <div className="flex justify-center mb-4">
-                    {feature.icon}
+                    <img src={feature.icon} alt={feature.title} className="w-12 h-12" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
@@ -86,11 +94,9 @@ const SobreSection = () => {
             ))}
           </div>
           
-          {/* Central Logo */}
+          {/* Central Logo - Using icon from Figma */}
           <div className="flex justify-center mt-8">
-            <div className="w-16 h-16 bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-              P
-            </div>
+            <img src={iconP} alt="Powerbizz.ai" className="w-12 h-12" />
           </div>
         </div>
       </div>

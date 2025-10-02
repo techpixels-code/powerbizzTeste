@@ -1,37 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Globe, BarChart3, Users, Shield, FileText } from "lucide-react";
+import iconImplementacao from "@/assets/icon-implementacao.png";
+import iconMundo from "@/assets/icon-mundo.png";
+import iconGestao from "@/assets/icon-gestao.png";
+import iconColaboradores from "@/assets/icon-colaboradores.png";
+import iconGovernanca from "@/assets/icon-governanca.png";
+import iconDisponivel from "@/assets/icon-disponivel.png";
 
 const ComoSection = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
-      title: "Análise Inteligente",
-      description: "Utilizamos IA avançada para analisar e otimizar todos os processos do seu negócio."
+      icon: iconImplementacao,
+      title: "Implementação Rápida",
+      description: "Sua pessoa digital funcionando em 48h, integrada e pronta para gerar resultados."
     },
     {
-      icon: <Globe className="w-8 h-8 text-white" />,
-      title: "Integração Global",
-      description: "Conectamos com todas as plataformas e ferramentas que você já utiliza."
+      icon: iconMundo,
+      title: "Atendimento Global",
+      description: "Suporte multilíngue para atender clientes em qualquer lugar do mundo."
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: "Métricas em Tempo Real",
-      description: "Acompanhe o desempenho e resultados através de dashboards intuitivos."
+      icon: iconGestao,
+      title: "Gestão Centralizada",
+      description: "Controle total através de um painel único e intuitivo."
     },
     {
-      icon: <Users className="w-8 h-8 text-white" />,
-      title: "Atendimento Personalizado",
-      description: "Criamos pessoas digitais únicas para cada cliente e situação."
+      icon: iconColaboradores,
+      title: "Múltiplos Colaboradores",
+      description: "Crie equipes digitais completas para diferentes áreas do seu negócio."
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: "Segurança Avançada",
-      description: "Proteção total dos dados com criptografia de nível bancário."
+      icon: iconGovernanca,
+      title: "Governança Total",
+      description: "Controle completo sobre permissões, acessos e conformidade."
     },
     {
-      icon: <FileText className="w-8 h-8 text-white" />,
-      title: "Relatórios Detalhados",
-      description: "Documentação completa de todas as interações e resultados obtidos."
+      icon: iconDisponivel,
+      title: "Disponível 24/7",
+      description: "Sua equipe digital nunca descansa, sempre pronta para atender."
     }
   ];
 
@@ -55,7 +60,7 @@ const ComoSection = () => {
             <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6 text-center hover:scale-105 transition-all duration-300">
               <CardContent className="p-0">
                 <div className="flex justify-center mb-4">
-                  {feature.icon}
+                  <img src={feature.icon} alt={feature.title} className="w-12 h-12" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>

@@ -7,6 +7,7 @@ import SobreSection from "@/components/sections/SobreSection";
 import ResolverSection from "@/components/sections/ResolverSection";
 import ComoSection from "@/components/sections/ComoSection";
 import EntregamosSection from "@/components/sections/EntregamosSection";
+import AreasAtuacaoSection from "@/components/sections/AreasAtuacaoSection";
 import AreasSection from "@/components/sections/AreasSection";
 import BeneficiosSection from "@/components/sections/BeneficiosSection";
 import ClientesSection from "@/components/sections/ClientesSection";
@@ -23,7 +24,7 @@ const Index = () => {
         <ResolverSection />
         <ComoSection />
         <EntregamosSection />
-        <AreasSection />
+        <AreasAtuacaoSection />
         <BeneficiosSection />
         <ClientesSection />
         <FeedbacksSection />

@@ -1,12 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  TrendingUp, 
-  Clock, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Sparkles
-} from "lucide-react";
+import iconFlecha from "@/assets/icon-flecha.png";
+import logoOpenAI from "@/assets/logo-openai.png";
+import logoMeta from "@/assets/logo-meta.png";
+import logoGoogle from "@/assets/logo-google.png";
+import logoAnthropic from "@/assets/logo-anthropc.png";
+import logoAWS from "@/assets/logo-aws.png";
+import logoA from "@/assets/logo-a.png";
 
 const BeneficiosSection = () => {
   const benefits = [
@@ -37,12 +36,12 @@ const BeneficiosSection = () => {
   ];
 
   const technologies = [
-    "OpenAI",
-    "Azure (Microsoft)",
-    "Google",
-    "Anthropic",
-    "AWS",
-    "Meta"
+    { name: "OpenAI", logo: logoOpenAI },
+    { name: "Meta", logo: logoMeta },
+    { name: "Google", logo: logoGoogle },
+    { name: "Anthropic", logo: logoAnthropic },
+    { name: "AWS", logo: logoAWS },
+    { name: "Azure", logo: logoA }
   ];
 
   return (
@@ -60,22 +59,24 @@ const BeneficiosSection = () => {
 
         {/* Benefits Grid with Arrow */}
         <div className="relative mb-20">
+          {/* Arrow Image - Positioned above cards */}
+          <div className="mb-8">
+            <img 
+              src={iconFlecha} 
+              alt="Flow" 
+              className="w-full h-auto max-w-6xl mx-auto"
+            />
+          </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6 text-center">
+              <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6 text-center hover:scale-105 transition-smooth">
                 <CardContent className="p-0">
                   <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
-          </div>
-          
-          {/* Animated Arrow */}
-          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 pointer-events-none">
-            <div className="flex justify-center">
-              <div className="w-96 h-1 bg-gradient-to-r from-transparent via-[#E040FB] to-transparent opacity-50"></div>
-            </div>
           </div>
         </div>
 
@@ -84,10 +85,14 @@ const BeneficiosSection = () => {
           <h3 className="text-lg text-muted-foreground mb-8">
             Tecnologias que utilizamos
           </h3>
-          <div className="flex flex-wrap justify-center items-center gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-12">
             {technologies.map((tech, index) => (
-              <div key={index} className="text-white/60 text-lg font-medium">
-                {tech}
+              <div key={index} className="opacity-60 hover:opacity-100 transition-opacity">
+                <img 
+                  src={tech.logo} 
+                  alt={tech.name} 
+                  className="h-8 w-auto grayscale hover:grayscale-0 transition-all"
+                />
               </div>
             ))}
           </div>

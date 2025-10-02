@@ -1,27 +1,31 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, Settings, Users, Clock } from "lucide-react";
+import imgMid from "@/assets/img-mid.png";
+import iconRight from "@/assets/icon-right.png";
 
 const EntregamosSection = () => {
-  const features = [
+  const leftFeatures = [
     {
-      icon: <MessageCircle className="w-8 h-8 text-white" />,
-      title: "Atendimento 24/7",
-      description: "Sua pessoa digital trabalha ininterruptamente, atendendo clientes a qualquer hora do dia."
+      number: "01",
+      title: "Pessoas Digitais Customizadas",
+      description: "Criamos agentes de IA sob medida para as necessidades específicas do seu negócio, com personalidade alinhada à sua marca."
     },
     {
-      icon: <Settings className="w-8 h-8 text-white" />,
-      title: "Automação Completa",
-      description: "Automatizamos processos complexos, desde qualificação até fechamento de vendas."
+      number: "02",
+      title: "Implementação Rápida",
+      description: "Do planejamento à execução em até 48h. Sua pessoa digital trabalhando para você em tempo recorde."
+    }
+  ];
+
+  const rightFeatures = [
+    {
+      number: "03",
+      title: "Integração Total",
+      description: "Conectamos com suas ferramentas existentes: CRM, WhatsApp, e-mail, chat do site e muito mais."
     },
     {
-      icon: <Users className="w-8 h-8 text-white" />,
-      title: "Qualificação Inteligente",
-      description: "Identificamos e qualificamos leads automaticamente, priorizando os mais promissores."
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-white" />,
-      title: "Resposta Instantânea",
-      description: "Respostas imediatas para seus clientes, sem filas de espera ou demoras."
+      number: "04",
+      title: "Treinamento Contínuo",
+      description: "Sua pessoa digital aprende continuamente com cada interação, melhorando seus resultados todos os dias."
     }
   ];
 
@@ -42,53 +46,50 @@ const EntregamosSection = () => {
         <div className="grid lg:grid-cols-3 gap-12 items-center">
           {/* Left Features */}
           <div className="space-y-8">
-            {features.slice(0, 2).map((feature, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6">
-                <CardContent className="p-0">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      {feature.icon}
+            {leftFeatures.map((feature, index) => (
+              <div key={index} className="space-y-3">
+                <div className="flex items-start space-x-4">
+                  <img src={iconRight} alt="check" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <div>
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
+                        {feature.number}
+                      </span>
+                      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Center Image */}
-          <div className="relative">
-            <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] rounded-full blur-2xl opacity-20"></div>
-              <div className="relative bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] p-1 rounded-full">
-                <div className="bg-background rounded-full p-4">
-                  <div className="w-64 h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center">
-                    <div className="text-6xl">👥</div>
+                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          {/* Center Image - Team image from Figma */}
+          <div className="relative flex justify-center">
+            <img 
+              src={imgMid} 
+              alt="Equipe Powerbizz.ai" 
+              className="w-full max-w-md h-auto"
+            />
           </div>
 
           {/* Right Features */}
           <div className="space-y-8">
-            {features.slice(2, 4).map((feature, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6">
-                <CardContent className="p-0">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      {feature.icon}
+            {rightFeatures.map((feature, index) => (
+              <div key={index} className="space-y-3">
+                <div className="flex items-start space-x-4">
+                  <img src={iconRight} alt="check" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <div>
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
+                        {feature.number}
+                      </span>
+                      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                    </div>
+                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
