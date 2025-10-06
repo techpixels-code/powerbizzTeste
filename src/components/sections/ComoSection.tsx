@@ -1,72 +1,85 @@
-import { Card, CardContent } from "@/components/ui/card";
-import iconImplementacao from "@/assets/icon-implementacao.png";
-import iconMundo from "@/assets/icon-mundo.png";
-import iconGestao from "@/assets/icon-gestao.png";
-import iconColaboradores from "@/assets/icon-colaboradores.png";
 import iconGovernanca from "@/assets/icon-governanca.png";
-import iconDisponivel from "@/assets/icon-disponivel.png";
+import iconIntegracao from "@/assets/icon-mundo.png";
+import iconEscalabilidade from "@/assets/icon-escabilidade.png";
+import iconGestao from "@/assets/icon-gestao.png";
+import iconSeguranca from "@/assets/icon-escudoright.png";
+import iconImplementacao from "@/assets/icon-implementacao.png";
 
 const ComoSection = () => {
   const features = [
     {
-      icon: iconImplementacao,
-      title: "Implementação Rápida",
-      description: "Sua pessoa digital funcionando em 48h, integrada e pronta para gerar resultados."
+      icon: iconGovernanca,
+      title: "Governança total",
+      description: "Cada interação registrada, auditável e em conformidade com a LGPD."
     },
     {
-      icon: iconMundo,
-      title: "Atendimento Global",
-      description: "Suporte multilíngue para atender clientes em qualquer lugar do mundo."
+      icon: iconIntegracao,
+      title: "Integração nativa",
+      description: "Conectamos os Digital Workers a ERP, CRM, APIs internas e plataformas de mercado."
+    },
+    {
+      icon: iconEscalabilidade,
+      title: "Escalabilidade sem barreiras",
+      description: "Qualquer área pode ter seus próprios colaboradores digitais, sem especialistas."
     },
     {
       icon: iconGestao,
-      title: "Gestão Centralizada",
-      description: "Controle total através de um painel único e intuitivo."
+      title: "Gestão unificada",
+      description: "Todos os agentes em um só painel, evitando o 'caos de bots'."
     },
     {
-      icon: iconColaboradores,
-      title: "Múltiplos Colaboradores",
-      description: "Crie equipes digitais completas para diferentes áreas do seu negócio."
+      icon: iconSeguranca,
+      title: "Segurança corporativa",
+      description: "Ambientes isolados, criptografia e controle de acesso rigoroso."
     },
     {
-      icon: iconGovernanca,
-      title: "Governança Total",
-      description: "Controle completo sobre permissões, acessos e conformidade."
-    },
-    {
-      icon: iconDisponivel,
-      title: "Disponível 24/7",
-      description: "Sua equipe digital nunca descansa, sempre pronta para atender."
+      icon: iconImplementacao,
+      title: "Implementação rápida",
+      description: "Implemente agentes em dias, não em meses, com nossa infraestrutura pronta."
     }
   ];
 
   return (
-    <section id="como" className="section-padding bg-background-secondary/50">
-      <div className="container-custom">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Como <span className="text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">fazemos isso?</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nossa metodologia proprietária garante que sua pessoa digital seja 
-            perfeitamente alinhada com seu negócio e objetivos.
-          </p>
-        </div>
+    <section id="como" className="relative py-16">
+      <div className="container-custom rounded-[24px] p-[2px] bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D]">
+        {/* Inner content with dark background */}
+        <div className="rounded-[22px] bg-[#000319] px-8 py-16 md:px-16">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-[38px] md:text-7xl leading-tight">
+              <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
+                Como{" "}
+              </span>
+              <span className="relative text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
+                fazemos
+                <div className="absolute -top-10 -left-20 w-[260px] h-[150px] bg-pink-500/40 blur-[120px] rounded-full"></div>
+              </span>{" "}
+              <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
+                isso?
+              </span>
+            </h2>
+            <p className="mt-6 text-[#E4ECFF] text-xl max-w-3xl mx-auto leading-relaxed font-light w-[756px]">
+              Nós <strong>criamos a plataforma líder de Agentic AI</strong> no Brasil. 
+              Uma infraestrutura unificada que permite às empresas criar, gerenciar e escalar Digital Workers.
+            </p>
+          </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6 text-center hover:scale-105 transition-all duration-300">
-              <CardContent className="p-0">
-                <div className="flex justify-center mb-4">
-                  <img src={feature.icon} alt={feature.title} className="w-12 h-12" />
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 gap-y-12 gap-x-12 max-w-5xl mx-auto">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center gap-4 w-[396px]">
+                <img src={feature.icon} alt={feature.title} className="w-8 h-8" />
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2 text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
+                    {feature.title}
+                  </h3>
+                  <p className="text-[#E4ECFF] text-lg text-base leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

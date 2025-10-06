@@ -1,65 +1,86 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { Play } from "lucide-react";
+
+import depoimentoVedacit from "@/assets/depoimento-vedacit.mp4";
+import depoimentoThera from "@/assets/depoimento-thera.mp4";
+import depoimentoFoggetti from "@/assets/depoimento-foggetti.mp4";
+import depoimentoBmc from "@/assets/depoimento-bmc.mp4";
 
 const FeedbacksSection = () => {
-  const testimonials = [
-    {
-      name: "Maria Silva",
-      position: "CEO da TechCorp",
-      text: "A Powerbizz.ai transformou completamente nosso atendimento. Aumentamos as conversões em 250% e reduzimos custos operacionais drasticamente."
-    },
-    {
-      name: "João Santos",
-      position: "Diretor Comercial - InnovaTech",
-      text: "Nunca imaginei que uma IA pudesse ser tão humanizada. Nossos clientes nem percebem que não estão falando com uma pessoa real."
-    },
-    {
-      name: "Ana Carvalho",
-      position: "Fundadora da DigitalFlow",
-      text: "A qualidade do atendimento melhorou exponencialmente. A IA consegue identificar perfeitamente as necessidades dos clientes."
-    }
+  const videos = [
+    { src: depoimentoVedacit, alt: "Depoimento Vedacit" },
+    { src: depoimentoThera, alt: "Depoimento Thera" },
+    { src: depoimentoFoggetti, alt: "Depoimento Foggetti" },
+    { src: depoimentoBmc, alt: "Depoimento BMC" },
   ];
 
   return (
-    <section id="depoimentos" className="section-padding">
+    <section id="depoimentos" className="">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent">
             O que{" "}
-            <span className="text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
+            <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent">
               nossos clientes
             </span>{" "}
             dizem
           </h2>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-sm border-card-border p-6">
-              <CardContent className="p-0">
-                {/* Quote Icon */}
-                <div className="flex justify-center mb-6">
-                  <Quote className="w-12 h-12 text-[#E040FB]" />
-                </div>
-
-                {/* Testimonial Text */}
-                <p className="text-muted-foreground leading-relaxed mb-6 text-center">
-                  "{testimonial.text}"
-                </p>
-
-                {/* Author */}
-                <div className="text-center">
-                  <div className="font-bold text-white text-lg">{testimonial.name}</div>
-                  <div className="text-muted-foreground">{testimonial.position}</div>
-                </div>
-              </CardContent>
-            </Card>
+        {/* Videos Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {videos.map((video, index) => (
+            <VideoCard key={index} video={video} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+// Componente isolado para cada vídeo
+const VideoCard = ({ video }: { video: { src: string; alt: string } }) => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  // Faz o vídeo carregar o primeiro frame imediatamente
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+  }, []);
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 group">
+      {/* Vídeo visível já com o primeiro frame */}
+      <video
+        ref={videoRef}
+        preload="metadata"
+        controls={isPlaying}
+        className="w-full h-full rounded-2xl object-cover bg-black"
+      >
+        <source src={video.src} type="video/mp4" />
+        Seu navegador não suporta vídeos em HTML5.
+      </video>
+
+      {/* Ícone de play sobre o vídeo (sempre visível até dar play) */}
+      {!isPlaying && (
+        <button
+          onClick={handlePlay}
+          className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors duration-300"
+        >
+          <Play className="w-16 h-16 text-white opacity-90" />
+        </button>
+      )}
+    </div>
   );
 };
 

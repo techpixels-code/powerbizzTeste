@@ -15,7 +15,7 @@ const CommunityPopup = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5514997665343", "_blank");
+    window.open("https://wa.me/5511974467018", "_blank");
   };
 
   const handleClose = () => {

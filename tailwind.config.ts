@@ -71,13 +71,11 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
-      fontFamily: {
-        inter: ['Inter', 'system-ui', 'sans-serif'],
-      },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-background': 'var(--gradient-background)',
         'gradient-card': 'var(--gradient-card)',
+        'gradient-custom': 'linear-gradient(90deg, #EB5CFF 0%, #F02AB5 100%)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',

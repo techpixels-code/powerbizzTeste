@@ -13,6 +13,9 @@ import BeneficiosSection from "@/components/sections/BeneficiosSection";
 import ClientesSection from "@/components/sections/ClientesSection";
 import FeedbacksSection from "@/components/sections/FeedbacksSection";
 import PlataformaSection from "@/components/sections/PlataformaSection";
+import CommunitySection from "@/components/sections/CommunitySection";
+
+
 
 const Index = () => {
   return (
@@ -29,9 +32,11 @@ const Index = () => {
         <ClientesSection />
         <FeedbacksSection />
         <PlataformaSection />
+        <CommunitySection />
+
       </main>
       <Footer />
-      <WhatsAppFloat />
+      {/* <WhatsAppFloat /> */}
       <CommunityPopup />
     </div>
   );

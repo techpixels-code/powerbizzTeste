@@ -1,94 +1,116 @@
-import { Card, CardContent } from "@/components/ui/card";
-import imgMid from "@/assets/img-mid.png";
-import iconRight from "@/assets/icon-right.png";
+import iconColaboradores from "@/assets/icon-colaboradores.png";
+import iconContextuais from "@/assets/icon-contextuais.png";
+import iconExecutivos from "@/assets/icon-operacionais.png";
+import iconDisponiveis from "@/assets/icon-disponivel.png";
+import imgMidBlur from "@/assets/img-midBlur.png";
 
 const EntregamosSection = () => {
-  const leftFeatures = [
+  const features = [
     {
-      number: "01",
-      title: "Pessoas Digitais Customizadas",
-      description: "Criamos agentes de IA sob medida para as necessidades específicas do seu negócio, com personalidade alinhada à sua marca."
+      icon: iconColaboradores,
+      title: "Colaboradores digitais com identidade",
+      description:
+        "Cada Digital Worker tem nome, rosto e função clara, criando conexão humana.",
     },
     {
-      number: "02",
-      title: "Implementação Rápida",
-      description: "Do planejamento à execução em até 48h. Sua pessoa digital trabalhando para você em tempo recorde."
-    }
-  ];
-
-  const rightFeatures = [
-    {
-      number: "03",
-      title: "Integração Total",
-      description: "Conectamos com suas ferramentas existentes: CRM, WhatsApp, e-mail, chat do site e muito mais."
+      icon: iconContextuais,
+      title: "Contextuais e especializados",
+      description:
+        "Falam apenas do universo da sua empresa, com conhecimento específico do negócio.",
     },
     {
-      number: "04",
-      title: "Treinamento Contínuo",
-      description: "Sua pessoa digital aprende continuamente com cada interação, melhorando seus resultados todos os dias."
-    }
+      icon: iconExecutivos,
+      title: "Operacionais e executivos",
+      description:
+        "Executam tarefas reais — geram pedidos, respondem clientes, processam informações.",
+    },
+    {
+      icon: iconDisponiveis,
+      title: "Disponíveis 24/7",
+      description:
+        "Trabalham em escala, sem limite de horário, mantendo qualidade constante.",
+    },
   ];
 
   return (
-    <section id="entregamos" className="section-padding">
+    <section
+      id="entregamos"
+      className="py-[100px] bg-[#000319] relative overflow-hidden"
+    >
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            O que <span className="text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">entregamos?</span>
+        <div className="relative text-center mb-20">
+          <h2 className="text-7xl leading-tight">
+            <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
+              O que{" "}
+            </span>
+            <span className="text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
+              entregamos
+            </span>
+            <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
+              ?
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Entregamos uma solução completa de Agentic AI que transforma 
-            completamente a forma como seu negócio atende e vende.
+          <div className="absolute left-[44%] bottom-[0] rounded-full w-[250px] h-[120px] bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] opacity-30 blur-3xl"></div>
+          <p className="mt-6 text-[#E4ECFF] text-xl max-w-2xl mx-auto leading-relaxed">
+            Entregamos Digital Workers, que nós chamamos de{" "}
+            <span className="font-semibold">Pessoas Digitais:</span>
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 items-center">
+        {/* Content */}
+        <div className="grid lg:grid-cols-3 gap-16 items-center">
           {/* Left Features */}
-          <div className="space-y-8">
-            {leftFeatures.map((feature, index) => (
-              <div key={index} className="space-y-3">
-                <div className="flex items-start space-x-4">
-                  <img src={iconRight} alt="check" className="w-6 h-6 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="flex items-center space-x-3 mb-2">
-                      <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
-                        {feature.number}
-                      </span>
-                      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
+          <div className="flex flex-col gap-24">
+            {features.slice(0, 2).map((feature, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center"
+              >
+                <img
+                  src={feature.icon}
+                  alt={feature.title}
+                  className="w-12 h-12 mb-4"
+                />
+                <h3 className="text-2xl font-semibold mb-3 text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
+                  {feature.title}
+                </h3>
+                <p className="text-[#E4ECFF] text-lg text-base leading-relaxed max-w-xs">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
 
-          {/* Center Image - Team image from Figma */}
-          <div className="relative flex justify-center">
-            <img 
-              src={imgMid} 
-              alt="Equipe Powerbizz.ai" 
-              className="w-full max-w-md h-auto"
-            />
+          {/* Center Image */}
+          <div className="relative flex justify-center items-center">
+            <div className="relative z-10">
+              <img
+                src={imgMidBlur}
+                alt="Pessoas Digitais"
+                className="w-full max-w-lg lg:max-w-xl h-auto"
+              />
+            </div>
           </div>
 
           {/* Right Features */}
-          <div className="space-y-8">
-            {rightFeatures.map((feature, index) => (
-              <div key={index} className="space-y-3">
-                <div className="flex items-start space-x-4">
-                  <img src={iconRight} alt="check" className="w-6 h-6 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="flex items-center space-x-3 mb-2">
-                      <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
-                        {feature.number}
-                      </span>
-                      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
+          <div className="flex flex-col gap-24">
+            {features.slice(2).map((feature, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center"
+              >
+                <img
+                  src={feature.icon}
+                  alt={feature.title}
+                  className="w-12 h-12 mb-4"
+                />
+                <h3 className="text-2xl font-semibold mb-3 text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
+                  {feature.title}
+                </h3>
+                <p className="text-[#E4ECFF] text-lg text-base leading-relaxed max-w-xs">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>

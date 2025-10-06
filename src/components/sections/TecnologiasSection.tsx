@@ -136,7 +136,7 @@ const TecnologiasSection = () => {
                 Não encontrou sua plataforma? Desenvolvemos integrações customizadas!
               </p>
               <button
-                onClick={() => window.open("https://wa.me/5514997665343", "_blank")}
+                onClick={() => window.open("https://wa.me/5511974467018", "_blank")}
                 className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-6 py-3 rounded-lg glow-primary transition-smooth"
               >
                 Solicitar Integração

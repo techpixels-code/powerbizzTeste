@@ -113,7 +113,7 @@ const PessoasDigitaisSection = () => {
             A Powerbizz.ai oferece exatamente isso para o seu negócio
           </p>
           <button
-            onClick={() => window.open("https://wa.me/5514997665343", "_blank")}
+            onClick={() => window.open("https://wa.me/5511974467018", "_blank")}
             className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-8 py-4 rounded-lg transition-smooth"
           >
             Quero minha pessoa digital
