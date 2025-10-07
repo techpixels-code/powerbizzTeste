@@ -41,7 +41,7 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto mt-[73px] md:mt-0 ">
           {/* Main Hero Text */}
           <div className="mb-8 md:mb-12">
-            <h1 className="h1Hero text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-8 leading-tight text-white">
+            <h1 className="h1Hero text-[50px] sm:text-5xl md:text-6xl lg:text-8xl mb-6 md:mb-8 leading-tight text-white">
               A força de trabalho{" "}
               <span className="text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
                 digital

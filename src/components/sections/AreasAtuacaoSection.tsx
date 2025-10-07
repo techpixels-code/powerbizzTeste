@@ -20,22 +20,25 @@ const AreasAtuacaoSection = () => {
   const phoneVideos = [phone1, phone2, phone3, phone4, phone5];
 
   return (
-    <section className=" relative bg-[#000319]">
-      <div className="container-custom relative rounded-[20px] border border-[#272A3C] p-10">
+    <section className="relative bg-[#000319]">
+      <div className="container-custom relative rounded-[20px] border border-[#272A3C] p-6 sm:p-10">
         {/* Top Content */}
-        <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-10 ">
+        <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-10">
           {/* Título */}
-          <h2 className="text-[38px] md:text-5xl font-bold leading-tight whitespace-nowrap">
+          <h2 className="text-[38px] sm:text-[38px] md:text-5xl font-bold leading-tight text-center lg:text-left">
             <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
-              Atuando em <br /> áreas como:
+              Atuando em <br className="hidden sm:block" /> áreas como:
             </span>
           </h2>
 
-          {/* Lista de Áreas - 2 linhas de 4 */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-4 text-2xl mt-4 lg:mt-2 flex-1">
+          {/* Lista de Áreas */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 sm:gap-x-10 gap-y-4 text-lg sm:text-xl mt-4 lg:mt-0 w-full lg:w-auto">
             {areas.map((area, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-[#FF6FD4]" />
+              <div
+                key={i}
+                className="flex items-center gap-2 whitespace-nowrap"
+              >
+                <Check className="w-5 h-5 text-[#FF6FD4] shrink-0" />
                 <span className="text-white">{area}</span>
               </div>
             ))}
@@ -52,7 +55,7 @@ const AreasAtuacaoSection = () => {
               loop
               muted
               playsInline
-              className="w-[180px] md:w-[220px] rounded-xl shadow-lg"
+              className="w-[150px] sm:w-[180px] md:w-[220px] rounded-xl shadow-lg"
             />
           ))}
         </div>

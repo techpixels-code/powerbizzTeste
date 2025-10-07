@@ -17,7 +17,7 @@ const SobreSection = () => {
             <div className="absolute -top-10 -left-10 w-[250px] h-[120px] md:w-[400px] md:h-[200px] bg-pink-500/40 blur-[80px] md:blur-[120px] rounded-full"></div>
 
             {/* Título */}
-            <h2 className="font-ubuntu text-[36px] sm:text-[48px] md:text-[60px] lg:text-[74px] font-normal leading-tight md:leading-[1.1] relative z-10">
+            <h2 className="font-ubuntu text-[50px] sm:text-[48px] md:text-[60px] lg:text-[74px] font-normal leading-tight md:leading-[1.1] relative z-10">
               <span className="block text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text">
                 Por que a
               </span>

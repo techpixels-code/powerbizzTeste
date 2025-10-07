@@ -33,22 +33,29 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 z-50">
-      {/* Header Container */}
-      <div className={`transition-all duration-300 z-50 ${
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-lg border-b border-border" 
-          : "px-4 xs:px-6 pt-12"
-      }`}>
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div
+        className={`transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/80 backdrop-blur-lg border-b border-border"
+            : "px-4 xs:px-6 pt-12"
+        }`}
+      >
         <nav
-          className={`flex items-center justify-center py-4 transition-all duration-300 z-50 ${
+          className={`flex items-center justify-center py-4 transition-all duration-300 ${
             isScrolled
               ? "container-custom px-6"
               : "bg-gradient-to-b from-[#04071D] to-[#15183A] rounded-2xl border border-card-border shadow-lg mx-auto max-w-3xl px-6"
           }`}
+          onClick={() => {
+            // Só ativa no mobile
+            if (window.innerWidth < 768) {
+              setIsMenuOpen((prev) => !prev);
+            }
+          }}
         >
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 z-50">
+          <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
               <button
                 key={item.id}
@@ -60,13 +67,10 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 text-foreground hover:text-primary transition-smooth"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          {/* Mobile Icon */}
+          <div className="md:hidden p-2 text-foreground hover:text-primary transition-smooth">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </div>
         </nav>
 
         {/* Mobile Menu */}

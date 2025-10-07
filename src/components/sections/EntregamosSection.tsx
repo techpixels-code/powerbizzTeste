@@ -40,7 +40,7 @@ const EntregamosSection = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="relative text-center mb-20">
-          <h2 className="text-7xl leading-tight">
+          <h2 className="text-[50px] leading-tight">
             <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
               O que{" "}
             </span>
