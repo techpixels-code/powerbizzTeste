@@ -23,7 +23,7 @@ const PlataformaSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Título */}
           <div className="mb-10 sm:mb-12">
-            <h2 className="text-[32px] sm:text-[42px] md:text-6xl lg:text-8xl font-bold mb-6 leading-tight bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent break-words">
+            <h2 className="text-[32px] sm:text-[42px] md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent break-words">
               A{" "}
               <span className="text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
                 Powerbizz.ai
@@ -39,7 +39,7 @@ const PlataformaSection = () => {
           {/* Descrição */}
           <div className="max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
             <p className="text-base sm:text-lg md:text-2xl leading-relaxed text-[#E4ECFF]">
-              Nós criamos e gerenciamos Pessoas Digitais — colaboradores digitais
+              Nós criamos e gerenciamos Pessoas Digitais, colaboradores digitais
               que trazem governança, segurança e escala para todas as áreas da sua empresa.
             </p>
           </div>

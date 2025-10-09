@@ -52,7 +52,7 @@ const ComoSection = () => {
         <div className="rounded-[22px] bg-[#000319] px-6 py-12 md:px-16 md:py-16">
           {/* Section Header */}
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-[32px] sm:text-[40px] md:text-7xl leading-tight">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[60px] leading-tight">
               <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
                 Como{" "}
               </span>

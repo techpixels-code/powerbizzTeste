@@ -54,8 +54,9 @@ const HeroSection = () => {
           <div className="max-w-3xl mx-auto mb-10 md:mb-16 px-2">
             <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-[#E4ECFF]">
               A Powerbizz.ai é a melhor plataforma de{" "}
-              <strong>Agentic AI</strong> do Brasil. Criamos e gerenciamos
-              Pessoas Digitais — colaboradores digitais que trazem governança,
+              <strong>Agentic AI</strong> do Brasil.
+              <br></br>Criamos e gerenciamos
+              Pessoas Digitais, colaboradores digitais que trazem governança,
               segurança e escala para todas as áreas da sua empresa.
             </p>
           </div>

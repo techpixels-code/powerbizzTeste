@@ -56,13 +56,13 @@ const ResolverSection = () => {
                 </div>
 
                 {/* Linha vertical saindo de cada card */}
-                <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full h-[273px] w-[2px] bg-gradient-to-b from-[#6971A2] via-[#FFFFFF] to-[#272A3C] rounded-full"></div>
+                <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full h-[161px] w-[2px] bg-gradient-to-b from-[#6971A2] via-[#FFFFFF] to-[#272A3C] rounded-full"></div>
               </div>
             ))}
           </div>
 
           {/* Ícone central */}
-          <div className="relative flex justify-center mt-60 z-50"> {/* GAP abaixo dos cards */}
+          <div className="relative flex justify-center mt-[8rem] z-50"> {/* GAP abaixo dos cards */}
             <div className="p-[2px] rounded-[20px] animate-gradient-border z-30">
               <div className="w-16 h-16 rounded-[20px] bg-[#0F1124] flex items-center justify-center shadow-lg">
                 <img src={iconP} alt="Powerbizz.ai" className="w-8 h-8" />
@@ -76,14 +76,14 @@ const ResolverSection = () => {
         {/* Texto abaixo */}
         <div className="max-w-[676px] mx-auto mt-10">
           <h2 className="text-3xl md:text-4xl mb-6">
-            <span className="text-[50px] text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text">
+            <span className="text-[60px] text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text">
               A Powerbizz.ai {" "}
             </span>
             
-            <span className="text-[50px] text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text">
+            <span className="text-[60px] text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text">
               nasceu para resolver{" "}
             </span>
-            <span className="text-[50px] text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text font-extrabold">
+            <span className="text-[60px] text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text font-extrabold">
               exatamente isso.
             </span>
           </h2>

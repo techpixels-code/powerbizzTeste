@@ -79,7 +79,7 @@ const CommunitySection = () => {
           <div className="md:absolute md:left-1/2 md:-bottom-10 md:-translate-x-1/2">
             <Button
               onClick={() =>
-                window.open("https://wa.me/5511974467018", "_blank")
+                window.open("https://api.whatsapp.com/send/?phone=5511974467018&text=Quero%20fazer%20parte%20da%20comunidade%21&type=phone_number&app_absent=0", "_blank")
               }
               className="bg-black text-white text-base md:text-lg px-6 md:px-10 py-4 md:py-6 rounded-xl hover:bg-gray-800 flex items-center gap-2 w-full md:w-auto justify-center"
             >

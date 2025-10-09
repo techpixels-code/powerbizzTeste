@@ -6,7 +6,7 @@ const BeneficiosSection = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-[60px] font-bold mb-6">
             <span className="text-transparent bg-gradient-to-r from-[#E040FB] to-[#8A2BE2] bg-clip-text">
               Benefícios
             </span>{" "}

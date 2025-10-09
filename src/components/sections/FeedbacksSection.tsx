@@ -18,18 +18,18 @@ const FeedbacksSection = () => {
     <section id="depoimentos" className="">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent">
+        {/* <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-[60px] font-bold mb-6 bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent">
             O que{" "}
             <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-[#FFFFFF] to-[#75798D] bg-clip-text text-transparent">
               nossos clientes
             </span>{" "}
             dizem
           </h2>
-        </div>
+        </div> */}
 
         {/* Videos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-h-[435px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {videos.map((video, index) => (
             <VideoCard key={index} video={video} />
           ))}

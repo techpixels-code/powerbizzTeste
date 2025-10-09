@@ -15,7 +15,7 @@ const CommunityPopup = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511974467018", "_blank");
+    window.open("https://api.whatsapp.com/send/?phone=5511974467018&text=Quero%20fazer%20parte%20da%20comunidade%21&type=phone_number&app_absent=0", "_blank");
   };
 
   const handleClose = () => {

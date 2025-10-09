@@ -25,7 +25,7 @@ const AreasAtuacaoSection = () => {
         {/* Top Content */}
         <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-10">
           {/* Título */}
-          <h2 className="text-[38px] sm:text-[38px] md:text-5xl font-bold leading-tight text-center lg:text-left">
+          <h2 className="text-[38px] sm:text-[38px] md:text-[60px] font-bold leading-tight text-center lg:text-left">
             <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
               Atuando em <br className="hidden sm:block" /> áreas como:
             </span>

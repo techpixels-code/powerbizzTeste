@@ -5,7 +5,7 @@ import iconDisponiveis from "@/assets/icon-disponivel.png";
 import imgMidBlur from "@/assets/img-midBlur.png";
 
 const EntregamosSection = () => {
-  const features = [
+  const featuresLeft = [
     {
       icon: iconColaboradores,
       title: "Colaboradores digitais com identidade",
@@ -18,6 +18,9 @@ const EntregamosSection = () => {
       description:
         "Falam apenas do universo da sua empresa, com conhecimento específico do negócio.",
     },
+  ];
+
+  const featuresRight = [
     {
       icon: iconExecutivos,
       title: "Operacionais e executivos",
@@ -38,9 +41,9 @@ const EntregamosSection = () => {
       className="py-[100px] bg-[#000319] relative overflow-hidden"
     >
       <div className="container-custom">
-        {/* Section Header */}
+        {/* Header */}
         <div className="relative text-center mb-20">
-          <h2 className="text-[50px] leading-tight">
+          <h2 className="text-[60px] leading-tight">
             <span className="text-transparent bg-gradient-to-r from-[#A3A8C6] via-white to-[#75798D] bg-clip-text">
               O que{" "}
             </span>
@@ -59,10 +62,10 @@ const EntregamosSection = () => {
         </div>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-3 gap-16 items-center">
-          {/* Left Features */}
-          <div className="flex flex-col gap-24">
-            {features.slice(0, 2).map((feature, index) => (
+        <div className="grid lg:grid-cols-3 items-center gap-16">
+          {/* Left */}
+          <div className="flex flex-col justify-between h-full gap-24">
+            {featuresLeft.map((feature, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center"
@@ -75,7 +78,7 @@ const EntregamosSection = () => {
                 <h3 className="text-2xl font-semibold mb-3 text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
                   {feature.title}
                 </h3>
-                <p className="text-[#E4ECFF] text-lg text-base leading-relaxed max-w-xs">
+                <p className="text-[#E4ECFF] text-lg leading-relaxed max-w-xs">
                   {feature.description}
                 </p>
               </div>
@@ -83,19 +86,17 @@ const EntregamosSection = () => {
           </div>
 
           {/* Center Image */}
-          <div className="relative flex justify-center items-center">
-            <div className="relative z-10">
-              <img
-                src={imgMidBlur}
-                alt="Pessoas Digitais"
-                className="w-full max-w-lg lg:max-w-xl h-auto"
-              />
-            </div>
+          <div className="flex justify-center items-center">
+            <img
+              src={imgMidBlur}
+              alt="Pessoas Digitais"
+              className="w-full max-w-lg lg:max-w-xl h-auto"
+            />
           </div>
 
-          {/* Right Features */}
-          <div className="flex flex-col gap-24">
-            {features.slice(2).map((feature, index) => (
+          {/* Right */}
+          <div className="flex flex-col justify-between h-full gap-24">
+            {featuresRight.map((feature, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center text-center"
@@ -108,7 +109,7 @@ const EntregamosSection = () => {
                 <h3 className="text-2xl font-semibold mb-3 text-transparent bg-gradient-to-r from-[#C000DB] to-[#FF6FD4] bg-clip-text">
                   {feature.title}
                 </h3>
-                <p className="text-[#E4ECFF] text-lg text-base leading-relaxed max-w-xs">
+                <p className="text-[#E4ECFF] text-lg leading-relaxed max-w-xs">
                   {feature.description}
                 </p>
               </div>

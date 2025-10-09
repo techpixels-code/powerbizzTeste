@@ -92,7 +92,7 @@
 
   h1, h2 {
     font-family: 'Gendy', system-ui, -apple-system, sans-serif !important;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.0px;
     font-weight: normal !important;
   }
 
@@ -112,6 +112,16 @@
   .font-inter {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
+}
+
+body {
+  .hubspot {
+    display: none !important;
+  }
+}
+
+#hubspot-messages-iframe-container {
+  display: none !important;
 }
 
 @layer components {
