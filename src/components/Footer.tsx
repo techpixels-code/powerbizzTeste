@@ -19,7 +19,7 @@ const Footer = () => {
               <img src={logoPowerbizz} alt="Powerbizz.ai" className="h-7 w-auto" />
             </div>
             <p className="text-sm text-[#E4ECFF] max-w-xs mb-6">
-              Seja um BizLover e nos siga nas redes sociais! 
+              Seja um BizzLover e nos siga nas redes sociais! 
               Venha fazer parte da revolução da AI com a gente!
             </p>
             <div className="flex space-x-4">
@@ -59,8 +59,8 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <img src={iconWhatsApp} alt="WhatsApp Atendimento" className="w-5 h-5" />
                 <span>
-                  WhatsApp Atendimento humano <br />
-                  +55 (11) 95412-8635
+                  WhatsApp Atendimento<br />
+                  +55 (11) 5043-1364
                 </span>
               </div>
             </div>

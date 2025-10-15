@@ -37,7 +37,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFloat />
-      <CommunityPopup />
+      {/* <CommunityPopup /> */}
     </div>
   );
 };
