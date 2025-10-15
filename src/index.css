@@ -114,13 +114,8 @@
   }
 }
 
-body {
-  .hubspot {
-    display: none !important;
-  }
-}
 
-#hubspot-messages-iframe-container {
+iframe#hubspot-conversations-iframe {
   display: none !important;
 }
 
