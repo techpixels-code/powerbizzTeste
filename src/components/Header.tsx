@@ -56,15 +56,27 @@ const Header = () => {
         >
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
-              >
-                {item.label}
-              </button>
-            ))}
+            {menuItems.map((item) =>
+              item.id === "plataforma" ? (
+                <a
+                  key={item.id}
+                  href="https://powerchat.powerbizz.ai/login" // coloque o link da plataforma
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-smooth font-medium"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-foreground hover:text-primary transition-smooth font-medium"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
           </div>
 
           {/* Mobile Icon */}
